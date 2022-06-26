@@ -242,7 +242,7 @@ body {
 }
 
 .contacts-title {
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 28px;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 32px;
@@ -274,7 +274,7 @@ body {
 }
 
 .appointment-title {
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 28px;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 32px;
@@ -284,12 +284,25 @@ body {
 }
 
 .appointment-form {
+  display: grid;
+  grid-template-columns: 114px 74px 208px;
+  gap: 20px;
   color: #595959;
+}
+
+.appointment-form .info {
+  display: none;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .form-label {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -298,9 +311,13 @@ body {
 .appointment-form-phone,
 .appointment-form-name {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.appointment-form-name {
+  grid-column: 1 / -1;
 }
 
 /* font-weight какой у плейса? */
@@ -315,6 +332,11 @@ body {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+}
+
+.appointment-submit {
+  grid-column: 1 / -1;
+  justify-self: start;
 }
 
 .page-footer-container {
