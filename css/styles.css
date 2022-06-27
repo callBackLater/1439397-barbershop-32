@@ -528,15 +528,25 @@ body {
 }
 
 .product-card {
+  display: grid;
+  grid-template-rows: min-content auto min-content 16px;
+  grid-template-columns: 16px 188px 16px;
   width: 220px;
   background-color: #FFFFFF;
 }
 
+.product-card-image {
+  margin-bottom: 16px;
+}
+
 .product-card-link {
+  grid-column: 2 / 3;
   text-decoration: none;
 }
 
 .product-card-title {
+  grid-column: 2 / 3;
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -544,12 +554,18 @@ body {
 }
 
 .product-card-price {
+  grid-column: 2 / 3;
+  margin-bottom: 16px;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 24px;
   line-height: 29px;
   font-weight: 700;
   color: #814B18;
   text-transform: uppercase;
+}
+
+.product-card-button {
+  grid-column: 2 / 3;
 }
 
 .pagination-container {
