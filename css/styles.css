@@ -70,6 +70,7 @@ body {
 
 .button {
   display: inline-block;
+  box-sizing: border-box;
   padding: 14px 20px;
   font-family: inherit;
   font-size: 16px;
@@ -84,9 +85,26 @@ body {
   cursor: pointer;
 }
 
+.button-all {
+  padding-right: 44px;
+  background-image: url('/img/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center right 20px;
+}
+
 .button-light {
   color: #242424;
   background-color: #FFFFFF;
+}
+
+.newsletter-button {
+  width: 56px;
+  height: 44px;
+  background-image: url('/img/arrow-tale-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
 }
 
 .page-header  {
@@ -105,7 +123,7 @@ body {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  width: 430px;
+  width: 570px;
   list-style-type: none;
 }
 
@@ -115,6 +133,7 @@ body {
 }
 
 .navigation-link  {
+  position: relative;
   display: block;
   padding: 24px 20px;
   font-family: "PT Sans Narrow", sans-serif;
@@ -130,6 +149,26 @@ body {
 .navigation-user .navigation-link {
   min-width: 16px;
   min-height: 22px;
+}
+
+.navigation-link-login {
+  padding-left: 44px;
+}
+
+.navigation-link-login .navigation-icon {
+  right: auto;
+  left: 20px;
+  margin: auto 0;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #BDBDBD;
 }
 
 .main-container {
@@ -456,6 +495,10 @@ body {
   text-transform: uppercase;
 }
 
+.newsletter-form {
+  display: flex;
+}
+
 .footer-social {
   width: 190px;
   margin-left: auto;
@@ -480,6 +523,31 @@ body {
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
 }
+
+
+.footer-social-link {
+  display: block;
+  height: 44px;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.footer-social-tw {
+  background-image: url('/img/twitter.svg');;
+}
+
+.footer-social-vk {
+  background-image: url('/img/vk.svg');
+  background-size: 16px 10px;
+}
+
+.footer-social-instagram {
+  background-image: url('/img/instagram.svg');
+}
+
+
 
 /* Страница каталога */
 
@@ -558,6 +626,27 @@ body {
   margin-right: auto;
 }
 
+.card-grid-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 44px;
+  background-color: #000000;
+}
+
+.card-grid-toggle svg {
+  fill: #FFFFFF;
+}
+
+.card-grid-toggle-current {
+  background-color: #FFFFFF;
+}
+
+.card-grid-toggle-current svg {
+  fill: #000000;
+}
+
 .sorting-container .button {
   width: 56px;
   height: 44px;
@@ -626,6 +715,7 @@ body {
   padding: 0;
   list-style-type: none;
 }
+
 /* .pagination-clear {
   background-color: transparent;
 } */
@@ -652,6 +742,25 @@ body {
 .pagination-current {
   color: #242424;
   background-color: #FFFFFF;
+}
+
+.pagination-prev,
+.pagination-next {
+  position: relative;
+}
+
+.pagination-prev {
+  background-image: url(/img/arrow-left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.pagination-next {
+  background-image: url(/img/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
 }
 
 .pagination-disabled {
