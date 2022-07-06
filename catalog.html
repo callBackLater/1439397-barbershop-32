@@ -179,11 +179,13 @@
             <div class="sorting-container">
               <form class="sorting-type">
                   <label class="visually-hidden" for="sorting">Сортировка</label>
-                  <select class="select-control" id="sorting" name="sorting">
-                      <option value="popular">Сначала популярное</option>
-                      <option value="cheap">Сначала дешёвое</option>
-                      <option value="expensive">Сначала дорогое</option>
-                  </select>
+                    <div class="select">
+                      <select class="select-control" id="sorting" name="sorting">
+                          <option value="popular">Сначала популярное</option>
+                          <option value="cheap">Сначала дешёвое</option>
+                          <option value="expensive">Сначала дорогое</option>
+                      </select>
+                    </div>
                   <button class="visually-hidden" type="submit">Отсортировать продукты</button>
               </form>
               <a class="card-grid-toggle card-grid-toggle-current" href="#">
