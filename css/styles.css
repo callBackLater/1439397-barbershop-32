@@ -393,6 +393,80 @@ body {
   text-transform: uppercase;
 }
 
+.slider-image {
+  display: block;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.slider-button {
+  width: 48px;
+  height: 60px;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+  background-image: url('/img/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider-button:hover {
+  background-color: #814B18;
+}
+
+.slider-button:focus {
+  background-color: #814B18;
+  outline: 2px solid #DBB590;
+}
+
+.slider-prev {
+  transform: rotate(180deg);
+}
+
+.slider-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider-pagination-item {
+  margin: 0 4px;
+}
+
+.slider-pagination-button {
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #BDBDBD;
+}
+
+.slider-pagination-button:hover {
+  background-color: #AF7842;
+}
+
+.slider-pagination-button:focus {
+  background-color: #DBB590;
+  outline: none;
+}
+
 .contacts {
   width: 350px;
   font-weight: 700;
