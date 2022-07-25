@@ -45,6 +45,7 @@ html {
 }
 
 body {
+  min-width: 1020px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -72,7 +73,7 @@ body {
   display: inline-block;
   box-sizing: border-box;
   padding: 14px 20px;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
@@ -108,6 +109,7 @@ body {
 }
 
 .button-all {
+  width: 192px;
   padding-right: 44px;
   background-image: url('/img/arrow-right.svg');
   background-repeat: no-repeat;
@@ -267,8 +269,9 @@ body {
 }
 
 .advantages-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 277px 277px 277px;
+  gap: 30px 54.5px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -344,7 +347,7 @@ body {
 }
 
 .services-title {
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 28px;
   font-size: 32px;
   line-height: 35px;
@@ -381,6 +384,7 @@ body {
 .services-price {
   order: 3;
   color: #AF7842;
+  word-spacing: 3px;
 }
 
 .gallery {
@@ -388,8 +392,8 @@ body {
 }
 
 .gallery-title {
-  margin-top: 20px;
-  margin-bottom: 28px;
+  margin-top: 0px;
+  margin-bottom: 20px;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 32px;
   line-height: 35px;
@@ -441,7 +445,6 @@ body {
 
 .slider-pagination {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -460,6 +463,10 @@ body {
   border: none;
   border-radius: 50%;
   background-color: #BDBDBD;
+}
+
+.slider-pagination-button-current {
+  background-color: #242424;
 }
 
 .slider-pagination-button:hover {
@@ -574,7 +581,7 @@ body {
 
 .contacts-title {
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 32px;
   line-height: 35px;
@@ -600,10 +607,12 @@ body {
 }
 
 .contacts-phone {
+  font-family: PT Sans Narrow;
   font-size: 24px;
   line-height: 29px;
   text-decoration-line: underline;
   color: #242424;
+  letter-spacing: -1px;
 }
 
 .contacts-schedule {
@@ -617,8 +626,9 @@ body {
   margin-bottom: 0;
 }
 
-.button + .button {
-  margin-left: 16px;
+.contacts-navigation .button {
+  margin-right: 13px;
+  margin-bottom: 5px;
 }
 
 .appointment {
@@ -627,7 +637,7 @@ body {
 
 .appointment-title {
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 32px;
   line-height: 35px;
@@ -638,7 +648,7 @@ body {
 .appointment-form {
   display: grid;
   grid-template-columns: 114px 74px 208px;
-  gap: 20px;
+  gap: 15px;
   color: #595959;
 }
 
@@ -683,10 +693,6 @@ body {
   width: 360px;
   color: #000000;
   background-color: #FFFFFF;
-}
-
-.modal-container-close {
-  display: none;
 }
 
 .form-label {
@@ -776,15 +782,18 @@ body {
 }
 
 .appointment-description {
+  color: #595959;
   font-size: 14px;
-  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 22px;
   font-weight: 400;
 }
 
 .appointment-submit {
   grid-column: 1 / -1;
   justify-self: start;
-  margin-top: 14px;
+  margin-top: 9px;
 }
 
 .page-footer-container {
@@ -847,17 +856,19 @@ body {
 
 .footer-contacts-address p {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
   font-weight: 700;
   color: #FFFFFF;
 }
 
 
-.footer-contacts-adress-phone {
+.footer-contacts-adress-phone  {
   font-family: "PT Sans Narrow", sans-serif;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 20px;
+  line-height: 28px;
   font-weight: 700;
+  letter-spacing: 0em;
+  text-align: left;
   text-decoration: underline;
   text-transform: uppercase;
 }
@@ -869,6 +880,10 @@ body {
   font-weight: 700;
   text-decoration: underline;
   text-transform: uppercase;
+}
+
+.newsletter {
+  max-width: 300px;
 }
 
 .newsletter-form {
@@ -980,6 +995,9 @@ body {
   text-transform: uppercase;
 }
 
+.modal-container-close {
+  display: none;
+}
 
 /* Страница каталога */
 
@@ -1014,6 +1032,7 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   color: #242424;
@@ -1027,7 +1046,7 @@ body {
 
 .breadcrumbs-item::after {
   position: absolute;
-  top: 10px;
+  top: 7px;
   right: -20px;
   width: 8px;
   height: 8px;
@@ -1081,11 +1100,18 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 0;
+}
+
+.range {
+  max-width: 220px;
+  overflow: auto;
 }
 
 .range-scale {
   position: relative;
   margin-bottom: 16px;
+  margin-top: 16px;
   height: 4px;
   background-color: #242424;
   border-radius: 2px;
@@ -1156,6 +1182,7 @@ body {
   position: relative;
   display: block;
   padding-left: 36px;
+  line-height: 22px;
 }
 
 .control-mark {
@@ -1216,6 +1243,8 @@ body {
 
 .sorting-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin-bottom: 16px;
   padding: 16px;
   color: #000000;
@@ -1345,6 +1374,7 @@ body {
   font-weight: 700;
   color: #814B18;
   text-transform: uppercase;
+  letter-spacing: -2px;
 }
 
 .product-card-button {
@@ -1359,9 +1389,14 @@ body {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.pagination-item {
+  margin-bottom: 5px;
 }
 
 /* .pagination-clear {
@@ -1375,8 +1410,8 @@ body {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 50px;
-  height: 44px;
+  min-width: 50px;
+  min-height: 44px;
   padding: 14px 20px;
   line-height: 16px;
   font-weight: 700;
@@ -1403,8 +1438,10 @@ body {
 .pagination-prev {
   background-image: url(/img/arrow-left.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 16px center;
   background-size: 16px 16px;
+  padding-left: 36px;
+  padding-right: 14px;
 }
 
 .pagination-next {
@@ -1412,6 +1449,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 16px;
+  padding-left: 36px;
+  padding-right: 14px;
 }
 
 .pagination-disabled {
@@ -1420,5 +1459,6 @@ body {
 
 .pagination-show-more {
   margin-left: auto;
+  max-width: 170px;
 }
 
