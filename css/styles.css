@@ -940,16 +940,16 @@ img {
 }
 
 .footer-social-tw {
-  background-image: url('/img/twitter.svg');;
+  background-image: url('https://callbacklater.github.io/barbershop/img/twitter.svg');
 }
 
 .footer-social-vk {
-  background-image: url('/img/vk.svg');
+  background-image: url('https://callbacklater.github.io/barbershop/img/vk.svg');
   background-size: 16px 10px;
 }
 
 .footer-social-instagram {
-  background-image: url('/img/instagram.svg');
+  background-image: url('https://callbacklater.github.io/barbershop/img/instagram.svg');
 }
 
 .modal-container {
